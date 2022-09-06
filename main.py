@@ -1,14 +1,14 @@
 from random import choice, randrange, randint
-import turtle as t
+import turtle
 RANGE = 500
 
 
-s = t.Screen()
+s = turtle.Screen()
 
-tim = t.Turtle()
-t.colormode(255)
-tim.pensize(15)
-tim.speed(0)
+t = turtle.Turtle()
+turtle.colormode(255)
+t.pensize(15)
+t.speed(0)
 
 def randcolor():
     r = randint(0, 255)
@@ -18,8 +18,8 @@ def randcolor():
 
 
 for i in range(RANGE):
-    tim.color(randcolor())
-    tim.circle(30, 180) # add a third argument i.e. 2, 3 for beautiful patterns
-    tim.setheading(randrange(0, 271, 90))
+    t.color(randcolor())
+    t.circle(30, 180) # add a third argument i.e. 2, 3 for beautiful patterns
+    t.setheading(randrange(0, 271, 90))
 
 s.exitonclick()
